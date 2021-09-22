@@ -1,19 +1,22 @@
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
 
-function Clock() {
-  return <div id="clock"></div>;
+function Clock(props) {
+  
+  if (props.renderClock) {
+    return <div id="clock">{setInterval(setClockInterval, 1000)}</div>;
+  }else{
+    return null;
+  }
+
+  function setClockInterval() {
+    const element = (
+      <div>
+        <p>It is {new Date().toLocaleTimeString()}</p>
+      </div>
+    );
+
+    ReactDOM.render(element, document.getElementById("clock"));
+  }
 }
-
-function setClockInterval() {
-  const element = (
-    <div>
-      <h2>It is {new Date().toLocaleTimeString()}</h2>
-    </div>
-  );
-
-  ReactDOM.render(element, document.getElementById('clock'));
-}
-
-setInterval(setClockInterval, 1000);
 
 export default Clock;
