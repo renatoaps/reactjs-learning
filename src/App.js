@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Hello World!!</h1>
-        <Clock renderClock={false}/>
+        <Clock />
         <Author github="renatoaps" name="Renato Santana"/>
       </header>
     </div>

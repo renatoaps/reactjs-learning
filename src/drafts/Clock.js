@@ -1,21 +1,34 @@
+import React from "react";
 import ReactDOM from "react-dom";
 
-function Clock(props) {
-  
-  if (props.renderClock) {
-    return <div id="clock">{setInterval(setClockInterval, 1000)}</div>;
-  }else{
-    return null;
+class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { date: new Date() };
   }
 
-  function setClockInterval() {
-    const element = (
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(), 1000
+      );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date()
+    });
+  }
+
+  render() {
+    return (
       <div>
-        <p>It is {new Date().toLocaleTimeString()}</p>
+        <h2>It is {this.state.date.toLocaleTimeString()}</h2>
       </div>
     );
-
-    ReactDOM.render(element, document.getElementById("clock"));
   }
 }
 
