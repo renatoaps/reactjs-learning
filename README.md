@@ -10,11 +10,12 @@ The `index.js` is responsible to render your `App`, by reading the `root element
 #### So, what happens?
 #
 the `ReactDOM.render` initialize first, then apply to the DOM , inside the root element your `App.js`.
-changing dinamically the DOM for your page.
+changing 
+mically the DOM for your page.
 
 #### Hello World
 #
-your-app comes out of the box with a 'hello world'. you can edit the `App.js` and save it to change its contents dinamically.
+your-app comes out of the box with a 'hello world'. you can edit the `App.js` and save it to change its contents dynamically.
 A hello world example in react:
 
 ```
