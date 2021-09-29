@@ -10,8 +10,7 @@ The `index.js` is responsible to render your `App`, by reading the `root element
 #### So, what happens?
 #
 the `ReactDOM.render` initialize first, then apply to the DOM , inside the root element your `App.js`.
-changing 
-mically the DOM for your page.
+changing dymically the DOM for your page.
 
 #### Hello World
 #
