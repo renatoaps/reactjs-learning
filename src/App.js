@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Clock from "./drafts/Clock";
 import Author from "./drafts/Author";
+import React from "react";
 
 function App() {
   return (
