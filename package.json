@@ -39,6 +39,7 @@
     "pnp": true
   },
   "devDependencies": {
+    "@types/react": "^17.0.26",
     "yarn-audit-fix": "^7.0.5"
   }
 }

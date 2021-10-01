@@ -1,6 +1,7 @@
 import React from 'react';
 
 class Toggle extends React.Component{
+  state: { isToggleOn: boolean; };
   constructor(props){
     super(props);
     this.state = {
@@ -15,6 +16,9 @@ class Toggle extends React.Component{
     this.setState(prevState => ({
       isToggleOn: !prevState.isToggleOn
     }));
+  }
+  setState(arg0: (prevState: any) => { isToggleOn: boolean; }) {
+    throw new Error('Method not implemented.');
   }
 
   render(){

@@ -1,7 +1,5 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Clock from "./components/Clock";
-import Author from "./components/Author";
 import React from "react";
 import Toggle from "./components/Toggle";
 

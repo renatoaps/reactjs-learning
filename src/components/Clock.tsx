@@ -1,6 +1,8 @@
 import React from "react";
 
 class Clock extends React.Component {
+  state: { date: Date; };
+  timerID: NodeJS.Timer;
   constructor(props) {
     super(props);
     this.state = { date: new Date() };
@@ -20,6 +22,9 @@ class Clock extends React.Component {
     this.setState({
       date: new Date()
     });
+  }
+  setState(arg0: { date: Date; }) {
+    throw new Error("Method not implemented.");
   }
 
   render() {
